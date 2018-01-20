@@ -1,0 +1,167 @@
+/*#bar {
+        top: -90px;
+        left: 90%;
+        padding: 1%;
+        margin: 0;
+        position: absolute;
+        width: 3%;
+        background: magenta;
+        color: aqua;
+        text-align: left;
+        transition: top 1s ease-out 0.5s;
+        transition-duration: 1s;
+    }
+    #bar:hover {
+        top: 0;}
+    .warn {
+        padding: 1%;
+        border-radius: 40%;
+        text-align: center ;
+        transition-duration: 2s;
+    }
+    .warn:hover {
+        background: yellow;
+
+    }
+
+    .warm {
+        background: yellow;
+        padding: 1%;
+        top: -50%;
+        position: absolute;
+        left: 0;  right: 0;
+
+    }
+    .fadeInTop {
+        animation-name: fadeInTop; !*Имя для вызова функции*!
+        animation-duration: 1s; !*Продолжительнгость анимации*!
+        animation-delay: 0.5s; !*Задержка*!
+        animation-fill-mode: forwards;
+         !*Остановка после конца анимации*!
+
+    }
+    @keyframes fadeInTop {
+        !*Правило @keyframes устанаввливает ключевые
+        кадры при анимациии элемента.*!
+        from {
+            top: -50%;
+        }
+        to {
+            top: 0;
+        }
+    }
+
+     .menu {
+         position: absolute;
+         height: 50px; width: 100%;
+         background: #abff5d;
+         border-bottom: 10px solid blue;
+         top:  -50px;
+         !*Анимация*!
+         transition-property: top;
+         !*Устанавливает имя стилевого свойства*!
+         transition-duration: 2s;
+         !*Длительность анимации*!
+
+     }
+     .menu:hover {
+         top: 0;
+     }
+
+     .progress {
+         background: #4add22;!*фон*!
+         border: 2px solid #2435fc; !*рамка*!
+         height: 30px; !*высота*!
+         position: relative; !*Относительное позиционироавние*!
+     }
+
+
+     .progress:hover::before{
+         width: 100%;
+     }
+     .progress::before{
+         transition-timing-function: !*ease out*! steps(10,end);
+         !*Скорость изменения стилевого свойства*!
+         transition-duration: 5s;!*Длительность анимации*!
+         content: '';
+         position: absolute;!*Абсолютное позиционирование*!
+         height: 100%;width: 0;
+         background: #ff2d27;!*Фон*!
+     }*/
+
+    body {
+        margin: 0;
+        background: #c2beb3;
+    }
+.loader-container {
+    position: absolute;
+    top: calc(50% - 65px);
+    left: calc(50% - 65px);
+    width: 100px;
+    height: 100px;
+    background: #BDE2E0;
+    border-radius: 40%;
+    border: 15px solid #D7694A;
+    box-shadow: inset 0 0 15px rgba(0,0,0,.5);
+    color: #1312ff;
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 100px;
+    overflow: hidden;
+}
+@keyframes load {
+    100% {
+        transform: translateY(-1100px);
+    }
+
+}
+.loader {
+    animation: load 11s steps(11, end) infinite;
+}
+{
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;+
+}
+@keyframes loader {
+    0% {
+        transform:rotate(-45deg)
+
+    }
+    50%{
+        transform:rotate(-135deg)
+    }
+    100%{
+        transform:rotate(-225deg)
+    }
+}
+@keyframes span-1 {
+    0% {
+        transform:translate(0);
+    }
+    50%{
+        transform:translate(-50px, 0);
+        border-color: #252bee
+    }
+    100%{
+        transform:translate(0);
+    }
+}
+@keyframes span-3 {
+    0% {
+        transform: translate(0);
+    }
+    50% {
+        transform: translate(0, -50px);
+        border-colour: #FF9900
+    }
+    100% {
+        transform: translate(0);
+    }
+}
